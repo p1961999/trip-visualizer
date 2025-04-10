@@ -1,37 +1,21 @@
 <div class="container">
-    <div class="row my-3 align-items-center">
-        <div class="col-md-4">
-            <input [(ngModel)]="from" placeholder="Start Point" class="form-control destination-input" />
-        </div>
-        <div class="col-md-4">
-            <input [(ngModel)]="to" placeholder="End Point" class="form-control destination-input" />
-        </div>
-        <div class="col-md-2">
-            <button type="button" class="btn btn-primary w-100" (click)="addTrip()">Add Trip</button>
-        </div>
+  <div class="row my-3 align-items-center">
+    <div class="col-md-4">
+      <input [(ngModel)]="from" placeholder="Start Point" class="form-control destination-input" />
     </div>
-
-    <!-- <div class="trip-list">
-        <div
-          *ngFor="let trip of trips; let i = index"
-          class="trip-box"
-          [id]="'trip-' + i"
-          [style.top.px]="getTopOffset(i)"
-        >
-          {{ trip.start }} - {{ trip.end }}
-        </div>
-      </div> -->
-
-</div>
-
-<div class="canvas">
-  <div
-    #tripBlock
-    class="trip-box"
-    *ngFor="let trip of trips; let i = index"
-    [ngStyle]="getBoxStyle(i)">
-    {{ trip.from }} → {{ trip.to }}
+    <div class="col-md-4">
+      <input [(ngModel)]="to" placeholder="End Point" class="form-control destination-input" />
+    </div>
+    <div class="col-md-2">
+      <button type="button" class="btn btn-primary w-100" (click)="addTrip()">Add Trip</button>
+    </div>
   </div>
 </div>
 
-  
+<div class="canvas">
+  @for(trip of trips; let i = $index; track i){
+  <div #tripBlock class="trip-box" [ngStyle]="getBoxStyle(i)">
+    {{ trip.from }} → {{ trip.to }}
+  </div>
+}
+</div>

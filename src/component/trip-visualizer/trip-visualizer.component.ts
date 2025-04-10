@@ -1,8 +1,7 @@
-import { CommonModule, NgClass } from '@angular/common';
-import { Component, ElementRef, NgZone, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
+import { CommonModule, NgStyle } from '@angular/common';
+import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import LeaderLine from 'leader-line-new';
-
 export interface Trip {
   from: string;
   to: string;
@@ -10,7 +9,7 @@ export interface Trip {
 @Component({
   selector: 'app-trip-visualizer',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, NgStyle],
   templateUrl: './trip-visualizer.component.html',
   styleUrl: './trip-visualizer.component.scss'
 })
