@@ -1,0 +1,48 @@
+.destination-input{
+    border: 1px solid #74777a !important;
+}
+  
+.trip-list {
+    position: relative;
+    height: 400px;
+    margin: 20px;
+  }
+  
+  .trip-box {
+    position: absolute;
+    left: 100px;
+    width: 120px;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    background-color: lightcyan;
+    border-radius: 6px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  .trip-box:nth-child(n) {
+    transform: translateX(calc(200px * var(--i)));
+  }
+  
+  .controls {
+    margin: 20px;
+    display: flex;
+    gap: 10px;
+  }
+
+  svg {
+    font-family: Arial, sans-serif;
+    user-select: none;
+  }
+  
+  text {
+    dominant-baseline: middle;
+    text-anchor: start;
+  }
+  
+  .canvas {
+  position: relative;
+  height: 400px;
+  margin-top: 60px;
+}

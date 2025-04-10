@@ -32,9 +32,16 @@
               }
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/assets/scss"]
+            },
+           "scripts": ["node_modules/bootstrap/dist/js/bootstrap.js",
+          "node_modules/leader-line/leader-line.min.js"
+        ],
+           "server": "src/main.server.ts"
           },
           "configurations": {
             "production": {
@@ -91,12 +98,17 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/leader-line/leader-line.min.js"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "ec893e54-031a-4596-a62b-43b7b390738d"
   }
 }
